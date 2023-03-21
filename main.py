@@ -9,6 +9,7 @@ from app.views.genres import genres_ns
 from app.views.movies import movies_ns
 from app.views.auth import auth_ns
 from app.views.users import user_ns
+from flask_cors import CORS
 
 
 def create_app(config: Config) -> Flask:
@@ -31,6 +32,7 @@ def configure_app(aplication: Flask):
 if __name__ == '__main__':
     app_config = Config()
     app = create_app(app_config)
+    CORS(app)
     configure_app(app)
     with app.app_context():
         db.create_all()

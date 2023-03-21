@@ -8,7 +8,7 @@ class UserDao:
         self.session = session
 
     def get_all(self):
-        users =  self.session.query(User).all()
+        users = self.session.query(User).all()
         return users
 
     def get_one(self, uid):

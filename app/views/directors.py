@@ -3,7 +3,6 @@ from flask_restx import Resource, Namespace
 
 from app.container import director_dao
 from app.dao.model.director import Director_scheme
-from decorator import auth_reguired
 
 directors_ns = Namespace('directors')
 
